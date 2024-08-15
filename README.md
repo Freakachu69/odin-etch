@@ -1,1 +1,1 @@
-# odin-etch
+An etch-a-sketch style sketchpad, created as part of the Odin Project curriculum. This project will demonstrate knowledge of DOM Manipulation and CSS.
