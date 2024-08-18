@@ -1,7 +1,12 @@
 body {
     display: flex;
+    flex-direction: column;
     height: 100vh;
     width: 100vw;
+}
+
+button {
+    margin: 0 40% 1%;
 }
 
 .container {
@@ -16,5 +21,4 @@ body {
     border: 1px dotted black;
     box-sizing: border-box;
     flex: 1;
-    flex-basis: 6.25%;
 }
