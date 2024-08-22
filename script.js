@@ -9,7 +9,14 @@ function etch(squares) {
         box.classList.add("box");
         box.style.flexBasis = `${basis}%`;
         box.addEventListener('mouseover', () => {
-            box.style.backgroundColor = "black";
+            function randomValue() {
+                return Math.floor(Math.random() * 255);
+            }
+            let red = randomValue();
+            let green = randomValue();
+            let blue = randomValue();
+            let randomColor = `rgb(${red}, ${green}, ${blue})`;
+            box.style.backgroundColor = `${randomColor}`;
         });
         container.appendChild(box);
     }
