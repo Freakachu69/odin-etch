@@ -8,14 +8,16 @@ function etch(squares) {
         let box = document.createElement("div");
         box.classList.add("box");
         box.style.flexBasis = `${basis}%`;
+        let opacity = 0;
         box.addEventListener('mouseover', () => {
             function randomValue() {
                 return Math.floor(Math.random() * 255);
             }
+            opacity += 0.1
             let red = randomValue();
             let green = randomValue();
             let blue = randomValue();
-            let randomColor = `rgb(${red}, ${green}, ${blue})`;
+            let randomColor = `rgb(${red}, ${green}, ${blue}, ${opacity})`;
             box.style.backgroundColor = `${randomColor}`;
         });
         container.appendChild(box);
