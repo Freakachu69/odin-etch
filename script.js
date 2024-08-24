@@ -26,30 +26,19 @@ function etch(squares) {
 
 btn.addEventListener('click', ()=> {
     let input = prompt("How many squares per side? (Max:100)");
-    if (input === null) {
-        return;
-    }
-    while (input > 100 || input < 1) {
+    while ((input > 100 || input < 1) && input) {
         input = prompt("Please choose a number between 1 and 100. Try again.");
-        if (input === null) {
-            return;
-        }
     }
     while (isNaN(input)) {
         input = prompt("Please choose a number. Try again.")
-        if (input === null) {
-            return;
-        }
-        while (input > 100 || input < 1) {
+        while ((input > 100 || input < 1) && input) {
             input = prompt("Please choose a number between 1 and 100. Try again.");
-            if (input === null) {
-                return;
-            }
         }
     }
-
+    if (input) {
     container.replaceChildren();
     etch(input);
+    }
 });
 
 etch(16);
